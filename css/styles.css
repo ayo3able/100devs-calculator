@@ -1,0 +1,68 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(195,207,203);
+    color: rgb(87, 87, 87);
+  }
+
+  .pad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    text-align: center;
+    margin-top: 10vh;
+    padding: 7% 0;
+    width: 55%;
+    border: rgb(212, 226, 222) 3px solid;
+    border-radius: 50px;
+    background: rgb(195,207,203);
+    box-shadow:  20px 20px 60px #a6b0ad,
+                -20px -20px 60px #e0eee9;
+  }
+  .display{
+    width: 75%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    padding: 10%;
+    text-align: right;
+  }
+
+  ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px; 
+    column-gap: 10px;
+    row-gap: 15px;
+    text-align: center;
+    padding-right: 10%;
+    
+  }
+  li{
+    background-color: white;
+    margin: 5%;
+    padding: 10px 15px;
+    border-radius: 50px;
+    
+  }
+  .oper{
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
