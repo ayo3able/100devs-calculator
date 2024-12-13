@@ -13,6 +13,7 @@
 
   body{
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,11 +59,14 @@
   li{
     background-color: white;
     margin: 5%;
-    padding: 10px 15px;
-    border-radius: 50px;
-    
+    padding: 15px;
+    border-radius: 18px;
   }
   .oper{
     font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px;
+  }
+  .num{
     font-weight: 700;
   }
