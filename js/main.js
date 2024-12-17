@@ -46,5 +46,3 @@ function clear(){
 
 
 
-// && elem.classList.contains("oper")
-// && elem.classList.contains("num")
