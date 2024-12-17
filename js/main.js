@@ -2,27 +2,49 @@ console.log("Working");
 //==================================
 // See class 12 simple calculator
 //==================================
+// display string in the display div
+// insert the value of the number(s) or operator(s) into a mathmatical expression: eval("1st-number operator 2nd-number")
+// return result of equation
+//display result in the display div: join(" ")
 
+//if click event value !== equal sign then push value to the end of array: arr.push(value)
 
-//When number or operator li is clicked combine them into a mathmatical expression (able to make a long expression not just two numbers and an operator)
-//display the mathmatical expression in the display div
-// when enter is clicked display the result of the expression
+//get the value of the list item that was clicked:
+let listItems = document.querySelectorAll("li")
+//element.addEventListener("click", doMath)
+let mathArr = []
 
-//click event for li elements
-let numbers = document.querySelectorAll(".num").forEach(num => {
-    num.addEventListener('click', doMath)
+listItems.forEach(function(elem){
+    elem.addEventListener("click", function(){
+        let value = elem.textContent.toString()
+
+        if (value !== "=" ){
+            mathArr.push(value)
+           
+           //  display array as a string in div: 
+           
+             document.getElementById("display").innerHTML = mathArr.join("")
+           
+           }else if (value === "="){
+            
+           let result = eval(mathArr.join(""))
+            document.getElementById("display").innerHTML = result
+           } 
+    })
 })
 
-document.querySelectorAll(".oper").forEach(op => {
-    op.addEventListener('click', doMath)
-})
+//=================================
+//Reset claculator
+//=================================
+document.getElementById("clear")?.addEventListener("click", clear)
 
-function doMath() {
-    console.log(numbers);
-    
+function clear(){
+    mathArr.length = 0
+     document.getElementById("display").innerHTML =""
 }
 
-//function to do mathmatical expression 
 
 
-//function when equal sign is pressed
+
+// && elem.classList.contains("oper")
+// && elem.classList.contains("num")
